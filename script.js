@@ -49,7 +49,7 @@ function searchByID() {
     let targetID = defineSearchTerm();
     console.log(`Searching for ID ${targetID}`);
 
-    let low = planetList[0].ID;
+    /*let low = planetList[0].ID;
     let high = planetList[5].ID;
     let mid = Math.round((low + high) / 2);
 
@@ -64,9 +64,9 @@ function searchByID() {
 
     if (planetList[mid].ID == targetID) {
         returnPlanet(mid);
-    }
+    }*/
 
-    /*let startIndex = 1;
+    let startIndex = 1;
     let endIndex = 6;
     let midpoint = Math.floor((startIndex + endIndex) / 2);
     console.log(`Midpoint is ${midpoint}`);
@@ -84,13 +84,13 @@ function searchByID() {
     if (planetList[midpoint].ID == targetID) {
         returnPlanet(planetList[midpoint].ID);
         console.log(`Midpoint is ${midpoint}`);
-    }*/
+    }
 }
 
 function returnPlanet(inputID) {
     let planetOutput = planetList[inputID];
     document.getElementById("outputName").innerHTML = planetOutput.name;
-    /*document.getElementById("outputID").innerHTML = planetOutput.ID;
+    document.getElementById("outputID").innerHTML = planetOutput.ID;
     document.getElementById("outputType").innerHTML = planetOutput.type;
-    document.getElementById("outputTraveler").innerHTML = planetOutput.traveler;*/
+    document.getElementById("outputTraveler").innerHTML = planetOutput.traveler;
 }
